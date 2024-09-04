@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>net user rajtandel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+/* Dark animated background */
+body {
+  background: linear-gradient(270deg, #1a1a1a, #0d0d0d, #1a1a1a, #0d0d0d);
+  background-size: 600% 600%;
+  animation: BackgroundAnimation 10s ease infinite;
+}
+
+@keyframes BackgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header Text Animation */
+h1.w3-jumbo {
+  animation: slideIn 2s ease-in-out, fadeIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Sidebar Icon Animation */
+.w3-sidebar .w3-bar-item {
+  animation: bounceIn 2s ease-in-out;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* 'whoami' Section Animation */
+#about {
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Custom animation for skill bars */
+.w3-wide {
+  animation: widen 3s ease-out forwards;
+}
+
+@keyframes widen {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* Lines Animation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+html, body {
+  height: 100%;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <!-- <img src="/w3images/avatar_smoke.jpg" style="width:100%"> -->
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>home.</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">home</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">iam</span><b>rajtandel.</b></h1>
+    <p>another tech enthusiast?</p>
+  </header>
+
+  <!-- Animated Lines -->
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about"> 
+    <h2 class="w3-text-light-grey">whoami.</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>my name is raj tandel, born in 2006. i'm someone who finds joy in a wide range of interests, from history and politics to tech, dogs, cooking, animals, mechanics, and cars.
+    </p>
+    
+    <h2 class="w3-text-light-grey">systeminfo.</h2> <!-- ABOUT ME PART 2 OF TECHNICAL PART-->
+    <hr style="width:200px" class="w3-opacity">
+    <p>i've always been passionate about technology, starting by troubleshooting basic hardware issues and gradually expanding my expertise to selling domains and hosting services in large volumes. with solid experience in windows server r16 and other versions, as well as cloud platforms like azure, google cloud, and aws, i've built a strong foundation in it. i've led a global team of over 10 professionals from the us, uk, uae, and south korea, and worked on numerous projects for friends and their organizations, involving technologies such as npm js, javascript, python, html + css, both with and without sql. my work includes creating advanced automated discord bots and developing a commercial cheat menu for gtav, which earned me over $240 usd in pre-bookings alone. however, my journey doesn't stop here—i'm always open to suggestions and feedback, striving to improve myself constantly. i believe that no one is ever meant to be perfect, but we can always become better versions of ourselves. it's always you vs. you, every day.
+    </p>
+    
+    <h3 class="w3-padding-16 w3-text-light-grey">wmic process list.</h3>
+    <p class="w3-wide">my love for cars and dogs. vroom /n woof :3</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:100%"></div>
+    </div>
+    <p class="w3-wide">it and programming.</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">history and politics.</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:75%"></div>
+    </div><br>
+    
+  </div>
+</div>
+
+</body>
+</html>
