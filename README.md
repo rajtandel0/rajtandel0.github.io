@@ -11,6 +11,8 @@
   </a>
 </p>
 
+<p align="center"> <a href="https://www.instagram.com/r3j.tandel" target="_blank"> <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"> </a> <a href="mailto:rajtandel2379@gmail.com"> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Send Email"> </a> </p
+
 ## About The Project
 
 This project is my personal website, designed to give you a detailed overview of who I am, my past experiences, and my current technical expertise. The website was created using HTML, CSS, and JavaScript, with animated elements and smooth transitions to create a unique and engaging experience.
