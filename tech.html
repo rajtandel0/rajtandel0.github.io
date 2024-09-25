@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>net user rajtandel | current projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.w3-sidebar {width: 120px;background: #222;}
+#main {margin-left: 120px}
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+body {
+background: linear-gradient(270deg, #1a1a1a, #0d0d0d, #1a1a1a, #0d0d0d);
+background-size: 600% 600%;
+animation: BackgroundAnimation 10s ease infinite;
+}
+
+@keyframes BackgroundAnimation {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+h1.w3-jumbo {
+animation: slideIn 2s ease-in-out, fadeIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+from { transform: translateX(-100%); }
+to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+.w3-sidebar .w3-bar-item {
+animation: bounceIn 2s ease-in-out;
+}
+
+@keyframes bounceIn {
+0% { transform: scale(0); }
+50% { transform: scale(1.1); }
+100% { transform: scale(1); }
+}
+
+#current-projects {
+animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+from { transform: translateY(100px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+
+.w3-wide {
+animation: widen 3s ease-out forwards;
+}
+
+@keyframes widen {
+0% { width: 0%; }
+100% { width: 100%; }
+}
+
+.lines {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 100%;
+margin: auto;
+width: 90vw;
+}
+
+.line {
+position: absolute;
+width: 1px;
+height: 100%;
+top: 0;
+left: 50%;
+background: rgba(255, 255, 255, 0.1);
+overflow: hidden;
+}
+
+.line::after {
+content: '';
+display: block;
+position: absolute;
+height: 15vh;
+width: 100%;
+top: -50%;
+left: 0;
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+animation: drop 7s 0s infinite;
+animation-fill-mode: forwards;
+animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+animation-delay: 2.5s;
+}
+
+@keyframes drop {
+0% {
+top: -50%;
+}
+100% {
+top: 110%;
+}
+}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+<a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+<i class="fa fa-home w3-xxlarge"></i>
+<p>home.</p>
+</a>
+<a href="blog.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+<i class="fa fa-book w3-xxlarge"></i>
+<p>blog.</p>
+</a>
+</nav>
+
+<!-- Navbar for small screens -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+<div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+<a href="#" class="w3-bar-item w3-button" style="width:25% !important">home</a>
+<a href="blog.html" class="w3-bar-item w3-button" style="width:25% !important">blog</a>
+</div>
+</div>
+
+<!-- Main content -->
+<div class="w3-padding-large" id="main">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32 w3-black">
+<h1 class="w3-jumbo"><span class="w3-hide-small">currently.</span>working on.</h1>
+<p>exploring new horizons</p>
+</header>
+
+<!-- Animated Lines -->
+<div class="lines">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<!-- Current Projects Section -->
+<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="current-projects">
+<h2 class="w3-text-light-grey">current_projects.</h2>
+<hr style="width:200px" class="w3-opacity">
+<p>At the moment, I'm deeply involved in multiple technical projects. From enhancing cloud-based solutions with Azure and Google Cloud to streamlining Discord bot automations, I'm always pushing the boundaries. Here are a few of my current ventures:</p>
+
+<ul class="w3-ul w3-text-light-grey">
+  <li><strong>Cloud Architecture Optimization</strong>: Improving infrastructure performance on Azure & AWS for various businesses.</li>
+  <li><strong>Custom Discord Bots</strong>: Developing bots for automation, gaming, and community management, tailored for individual clients.</li>
+  <li><strong>Expanding GTAV Cheat Menu</strong>: Enhancing features and functionalities for my popular GTAV mod menu.</li>
+  <li><strong>Learning Rust & Blockchain</strong>: Exploring new technologies to build secure, decentralized applications.</li>
+</ul>
+
+<h3 class="w3-padding-16 w3-text-light-grey">next steps.</h3>
+<p class="w3-wide">Learning new languages & frameworks.</p>
+<div class="w3-white">
+<div class="w3-dark-grey" style="height:28px;width:90%"></div>
+</div>
+<p class="w3-wide">Scaling automation & cloud systems.</p>
+<div class="w3-white">
+<div class="w3-dark-grey" style="height:28px;width:85%"></div>
+</div>
+<p class="w3-wide">Experimenting with AI integrations.</p>
+<div class="w3-white">
+<div class="w3-dark-grey" style="height:28px;width:80%"></div>
+</div><br>
+
+</div>
+
+</div>
+
+</body>
+</html>
