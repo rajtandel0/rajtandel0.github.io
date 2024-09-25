@@ -21,10 +21,11 @@ This project is my personal website, designed to give you a detailed overview of
 - Fully responsive and accessible on mobile and desktop devices.
 - Designed for ease of navigation with a sidebar for quick access.
 
-## Tech Stack
-- **Languages**: HTML, CSS, JavaScript, SCSS
-- **Cloud Platforms**: Azure, AWS, Google Cloud
-- **Version Control**: Git & GitHub
+## Credits
+- **Base Web Source**: The font and theme used on the webpage (excluding the CSS animations) were sourced from <a href="https://w3schools.com"> W3schools </a>
+- **Advanced Background and Text CSS animations**: Background and text animation effects base were sourced from <a href="https://devdevout.com/css/css-animated-backgrounds"> DevDevOut </a>
+- 
+
 
 ## Installation & Setup
 To set up the project locally:
