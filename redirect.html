@@ -1,28 +1,11 @@
 <!DOCTYPE html>
 <html>
-<input type="button" id="btnRedirect" value="Redirect to Blog" />
-<br />
-<br />
-<p>NOTE: YOU WILL BE REDIRECTED TO EXTERNAL WEBPAGE...</p>
-<div id="dvCountDown" style="display: none">
-You will be redirected after <span id="lblCount"></span>&nbsp;seconds.
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
-$(function () {
-    $("#btnRedirect").click(function () {
-        var seconds = 5;
-        $("#dvCountDown").show();
-        $("#lblCount").html(seconds);
-        setInterval(function () {
-            seconds--;
-            $("#lblCount").html(seconds);
-            if (seconds == 0) {
-                $("#dvCountDown").hide();
-                window.location = "https://www.rajtandel0.blogspot.com/";
-            }
-        }, 1000);
-    });
-});
-</script>
-</HTML>
+   <head>
+      <title>REDIRECTING/title>
+      <meta http-equiv = "refresh" content = "5; url = https://rajtandel0.blogspot.com" />
+   </head>
+   
+   <body>
+      <p>YOU WILL BE REDIRECTED TO AN EXTERNAL WEBPAGE IN 5 SECONDS.</p>
+   </body>
+</html>
