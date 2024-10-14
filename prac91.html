@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form - Jai Hind College</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1d1f27;
+            color: #f1f1f1;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #fff;
+            margin: 0;
+            padding: 10px 0;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        form {
+            background-color: #2b2e3d;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #b5b5b5;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background-color: #343847;
+            border: 1px solid #4d4f5c;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #fff;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input:focus, select:focus {
+            border-color: #4d79f6;
+            outline: none;
+            box-shadow: 0 0 10px rgba(77, 121, 246, 0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4d79f6;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #4263d6;
+            transform: scale(1.03);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        p {
+            text-align: center;
+            font-size: 13px;
+            color: #9a9aa1;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+            padding: 10px;
+            animation: fadeIn 2s ease-in-out;
+            width: 100%;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            font-size: 13px;
+            color: #b5b5b5;
+        }
+
+        .radio-group input {
+            margin-right: 5px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Admissions - Jai Hind College</h1>
+
+    <form id="registrationForm">
+        <h2>Registration Form</h2>
+        <p>Filling out this form does not guarantee admission. <b> All admissions are subject to eligibility as per Mumbai University and Jai Hind College norms</b>, and availability of seats.</p>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">Desired Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="dob">Date of Birth (DOB):</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="address">Home Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="grade10">Grade 10 Marks (%):</label>
+        <input type="number" id="grade10" name="grade10" min="0" max="100" required>
+
+        <label for="grade12">Grade 12 Marks (%):</label>
+        <input type="number" id="grade12" name="grade12" min="0" max="100" required>
+
+        <label for="entranceExam">Entrance Exam Score (if applicable):</label>
+        <input type="number" id="entranceExam" name="entranceExam" min="0" max="100">
+
+        <label for="course">Course of Interest: </label>
+        <input type="text" id="course" name="course" required>
+
+        <p><b>PLEASE NOTE: MINORITY/CASTE RESERVATION AVAILABILITY SUBJECT TO DOCUMENT VERIFICATION AND QUOTA SEAT ALLOCATION</b></p>
+        
+        <label>Do you belong to Sindhi Minority?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="sindhiMinority" value="Yes" required> Yes</label>
+            <label><input type="radio" name="sindhiMinority" value="No" required> No</label>
+        </div>
+
+        <label>Do you belong to any Reserved Category?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="RESERVEDCASTE" value="Yes" required> Yes, I belong to SC/ST</label>
+            <label><input type="radio" name="RESERVEDCASTE" value="No" required> No</label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer><h2>All rights reserved 2024 - Jai Hind College</h2></footer>
+
+<script>
+    $(document).ready(function() {
+        $("#registrationForm").on("submit", function(event) {
+            event.preventDefault();
+            if ($(this).find("input[required]").filter(function() { return !this.value; }).length > 0) {
+                alert("Please fill in all required fields.");
+            } else {
+                alert("Registration successful, Stay Tuned and Thank you!");
+                this.reset();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
